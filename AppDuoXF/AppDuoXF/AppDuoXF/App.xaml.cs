@@ -28,6 +28,11 @@ namespace AppDuoXF
 
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<LessonsView, LessonsViewViewModel>();
+            containerRegistry.RegisterForNavigation<TrainingView, TrainingViewViewModel>();
+            containerRegistry.RegisterForNavigation<ProfileView, ProfileViewViewModel>();
+            containerRegistry.RegisterForNavigation<RankingView, RankingViewViewModel>();
+            containerRegistry.RegisterForNavigation<StoreView, StoreViewViewModel>();
         }
     }
 }
