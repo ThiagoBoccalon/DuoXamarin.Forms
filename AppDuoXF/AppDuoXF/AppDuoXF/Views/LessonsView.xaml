@@ -5,5 +5,8 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="AppDuoXF.Views.LessonsView"
              Title="Lessons">
+    <StackLayout>
+        <Label Text="Lessons View" />
+    </StackLayout>
   
 </ContentPage>
