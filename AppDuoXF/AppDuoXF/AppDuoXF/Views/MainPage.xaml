@@ -9,12 +9,6 @@
             BarTextColor="White"
             Title="{Binding Title}">
 
-    <TabbedPage.Children>
-        <views:LessonsView />
-        <views:TrainingView />
-        <views:RankingView />
-        <views:ProfileView />
-        <views:StoreView />
-    </TabbedPage.Children>
+    
 
 </TabbedPage>
