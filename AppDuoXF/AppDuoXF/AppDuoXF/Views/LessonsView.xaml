@@ -5,7 +5,7 @@
              xmlns:controls="clr-namespace:AppDuoXF.Controls"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="AppDuoXF.Views.LessonsView"
-             Title="Lesson">
+             >
     <ContentPage.Content>
         <AbsoluteLayout>
             <ScrollView

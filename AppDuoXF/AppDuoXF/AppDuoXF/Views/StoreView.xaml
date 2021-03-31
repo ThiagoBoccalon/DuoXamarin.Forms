@@ -4,7 +4,7 @@
              xmlns:prism="http://prismlibrary.com"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="AppDuoXF.Views.StoreView"
-             Title="Store">
+             >
     <StackLayout>
         <Label Text="Store View" />
     </StackLayout>
