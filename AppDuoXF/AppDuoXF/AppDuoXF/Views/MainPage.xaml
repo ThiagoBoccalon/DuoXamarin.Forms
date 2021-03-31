@@ -7,7 +7,7 @@
             android:TabbedPage.ToolbarPlacement="Bottom"
             BarBackgroundColor="#2196F3"
             BarTextColor="White"
-            Title="{Binding Title}">
+            >
 
     
 
