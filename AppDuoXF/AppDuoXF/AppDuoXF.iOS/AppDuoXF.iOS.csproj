@@ -106,6 +106,12 @@
     <None Include="Info.plist" />
     <LinkDescription Include="LinkerSettings.xml" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <BundleResource Include="Resources\Fonts\DINNextRoundedLTPro-Bold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\DINNextRoundedLTPro-Regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">

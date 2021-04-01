@@ -12,6 +12,7 @@
                 AbsoluteLayout.LayoutBounds="1,1,1,1"
                 AbsoluteLayout.LayoutFlags="All"
                 >
+                <!--
                 <StackLayout >
                     <Label Text="Lesson Test 01" FontSize="60" Margin="0,20,0,20"/>
                     <Label Text="Lesson Test 02" FontSize="60" Margin="0,20,0,20"/>
@@ -19,6 +20,7 @@
                     <Label Text="Lesson Test 04" FontSize="60" Margin="0,20,0,20"/>
                     <Label Text="Lesson Test 05" FontSize="60" Margin="0,20,0,20"/>
                 </StackLayout>
+                -->
             </ScrollView>
             
             <controls:FormsFloatingAcctionButton  
