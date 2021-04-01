@@ -1,9 +1,8 @@
 ﻿using Android.Content;
 using AppDuoXF.Droid.Renderers;
-using AppDuoXF.Views;
+using AppDuoXF.Interfaces;
 using Google.Android.Material.BottomNavigation;
 using System;
-using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms.Platform.Android.AppCompat;
@@ -23,8 +22,8 @@ namespace AppDuoXF.Droid.Renderers
         protected override void OnElementChanged(ElementChangedEventArgs<TabbedPage> e)
         {
             base.OnElementChanged(e);
-            
-            if(e.NewElement != null)
+
+            if (e.NewElement != null)
             {
                 _formsTabs = Element;
                 _formsTabs.CurrentPageChanged += OnCurrentPageChanged;
@@ -42,63 +41,33 @@ namespace AppDuoXF.Droid.Renderers
 
             if (e.OldElement != null)
                 _formsTabs.CurrentPageChanged -= OnCurrentPageChanged;
-
         }
 
         private void UpdateAlltabs()
-        {            
-            for(var index = 0; index < _formsTabs.Children.Count; index++)
+        {
+            for (var index = 0; index < _formsTabs.Children.Count; index++)
             {
                 var androidTab = _bottomNavigationView.Menu.GetItem(index);
-
-                if(_formsTabs.Children[index] is LessonsView)
-                {
-                    if(_formsTabs.Children[index] == _formsTabs.CurrentPage)
-                    {                        
-                        androidTab.SetIcon(Resource.Drawable.tab_lessons_selected);
-                        continue;
-                    }
-
-                    androidTab.SetIcon(Resource.Drawable.tab_lessons);
-                    continue;
-                }
-
-                if(_formsTabs.Children[index] is ProfileView)
+                int iconId;
+                
+                if(_formsTabs.Children[index] is ITabPageIcons tabPage)
                 {
                     if(_formsTabs.Children[index] == _formsTabs.CurrentPage)
                     {
-                        androidTab.SetIcon(Resource.Drawable.tab_profile_selected);
+                        iconId = GetIconIdByFileName(tabPage.GetSelectedIcon());
+                        androidTab.SetIcon(iconId);
                         continue;
                     }
 
-                    androidTab.SetIcon(Resource.Drawable.tab_profile);
-                    continue;
-                }
-
-                if (_formsTabs.Children[index] is RankingView)
-                {
-                    if (_formsTabs.Children[index] == _formsTabs.CurrentPage)
-                    {
-                        androidTab.SetIcon(Resource.Drawable.tab_ranking_selected);
-                        continue;
-                    }
-
-                    androidTab.SetIcon(Resource.Drawable.tab_ranking);
-                    continue;
-                }
-
-                if (_formsTabs.Children[index] is StoreView)
-                {
-                    if (_formsTabs.Children[index] == _formsTabs.CurrentPage)
-                    {
-                        androidTab.SetIcon(Resource.Drawable.tab_store_selected);
-                        continue;
-                    }
-
-                    androidTab.SetIcon(Resource.Drawable.tab_store);
-                    continue;
+                    iconId = GetIconIdByFileName(tabPage.GetIcon());
+                    androidTab.SetIcon(iconId);
                 }
             }
+        }
+
+        private int GetIconIdByFileName(string fileName)
+        {
+            return Resources.GetIdentifier(fileName, "drawable", Context.PackageName);
         }
 
         private void OnCurrentPageChanged(object sender, EventArgs e)
