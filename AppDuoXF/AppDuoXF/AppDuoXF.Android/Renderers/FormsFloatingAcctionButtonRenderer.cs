@@ -5,12 +5,14 @@ using Google.Android.Material.FloatingActionButton;
 using Xamarin.Forms;
 using AppDuoXF.Droid.Renderers;
 using System;
+using Android.Content.Res;
 
 [assembly : ExportRenderer(typeof(FormsFloatingAcctionButton), typeof(FormsFloatingAcctionButtonRenderer))]
 namespace AppDuoXF.Droid.Renderers
 {
     public class FormsFloatingAcctionButtonRenderer : Xamarin.Forms.Platform.Android.AppCompat.ViewRenderer<FormsFloatingAcctionButton, FloatingActionButton>
     {
+        private FloatingActionButton _floatingActionButton;
         public FormsFloatingAcctionButtonRenderer(Context context) : base(context)
         {
         }
@@ -21,12 +23,23 @@ namespace AppDuoXF.Droid.Renderers
 
             if(e.NewElement != null)
             {
-                var fab = new FloatingActionButton(Context);
-                fab.UseCompatPadding = true;
-                fab.Click += OnFabClick;
-                SetNativeControl(fab);
+                _floatingActionButton = new FloatingActionButton(Context);
+                _floatingActionButton.UseCompatPadding = true;
+                ConfigureBackgroundColor();
+                _floatingActionButton.Click += OnFabClick;
+                SetNativeControl(_floatingActionButton);
             }
 
+        }
+
+        private void ConfigureBackgroundColor()
+        {
+            if (Element == null)
+                return;
+
+            var floatingActionButtonColor = Element.BackgroundColor.ToAndroid();
+            _floatingActionButton.BackgroundTintList = ColorStateList.ValueOf(floatingActionButtonColor);
+            Element.BackgroundColor = Color.Transparent;
         }
 
         private void OnFabClick(object sender, EventArgs e)
