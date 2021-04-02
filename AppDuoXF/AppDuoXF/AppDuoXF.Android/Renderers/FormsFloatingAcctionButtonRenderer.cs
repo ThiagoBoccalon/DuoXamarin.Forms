@@ -6,6 +6,7 @@ using Xamarin.Forms;
 using AppDuoXF.Droid.Renderers;
 using System;
 using Android.Content.Res;
+using AppDuoXF.Droid.Utils;
 
 [assembly : ExportRenderer(typeof(FormsFloatingAcctionButton), typeof(FormsFloatingAcctionButtonRenderer))]
 namespace AppDuoXF.Droid.Renderers
@@ -42,8 +43,8 @@ namespace AppDuoXF.Droid.Renderers
             var fileName = (Element.ImageSource as FileImageSource)?.File;
             if (fileName == null)
                 return;
-
-            var resourceId = Resources.GetIdentifier(fileName, "drawable", Context.PackageName);
+                        
+            var resourceId = ResourceUtil.GetDrawableIdByFileName(fileName, Context);
             _floatingActionButton.SetImageResource(resourceId);
         }
 

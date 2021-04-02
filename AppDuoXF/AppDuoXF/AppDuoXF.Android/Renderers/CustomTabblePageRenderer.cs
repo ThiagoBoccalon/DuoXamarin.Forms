@@ -1,5 +1,6 @@
 ﻿using Android.Content;
 using AppDuoXF.Droid.Renderers;
+using AppDuoXF.Droid.Utils;
 using AppDuoXF.Interfaces;
 using Google.Android.Material.BottomNavigation;
 using System;
@@ -54,20 +55,15 @@ namespace AppDuoXF.Droid.Renderers
                 {
                     if(_formsTabs.Children[index] == _formsTabs.CurrentPage)
                     {
-                        iconId = GetIconIdByFileName(tabPage.GetSelectedIcon());
+                        iconId = ResourceUtil.GetDrawableIdByFileName(tabPage.GetSelectedIcon(), Context);
                         androidTab.SetIcon(iconId);
                         continue;
                     }
 
-                    iconId = GetIconIdByFileName(tabPage.GetIcon());
+                    iconId = ResourceUtil.GetDrawableIdByFileName(tabPage.GetIcon(), Context);
                     androidTab.SetIcon(iconId);
                 }
             }
-        }
-
-        private int GetIconIdByFileName(string fileName)
-        {
-            return Resources.GetIdentifier(fileName, "drawable", Context.PackageName);
         }
 
         private void OnCurrentPageChanged(object sender, EventArgs e)
