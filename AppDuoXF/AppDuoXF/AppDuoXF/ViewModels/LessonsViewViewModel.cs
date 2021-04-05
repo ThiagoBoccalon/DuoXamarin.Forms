@@ -1,4 +1,5 @@
-﻿using Prism.Commands;
+﻿using AppDuoXF.Interfaces;
+using Prism.Commands;
 using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
@@ -11,11 +12,11 @@ namespace AppDuoXF.ViewModels
     {
         public ICommand NavigateToTrainingCommand { get; private set; }
 
-        public LessonsViewViewModel()
+        public LessonsViewViewModel(ILessonService lessonService)
         {
             NavigateToTrainingCommand = new DelegateCommand(NavigateToTrainingExecute);
         }
-
+        
         private void NavigateToTrainingExecute()
         {
             System.Diagnostics.Debug.WriteLine("The button FAB was clicked.");

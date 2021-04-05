@@ -1,3 +1,5 @@
+using AppDuoXF.Fakes;
+using AppDuoXF.Interfaces;
 using AppDuoXF.ViewModels;
 using AppDuoXF.Views;
 using Prism;
@@ -33,6 +35,8 @@ namespace AppDuoXF
             containerRegistry.RegisterForNavigation<ProfileView, ProfileViewViewModel>();
             containerRegistry.RegisterForNavigation<RankingView, RankingViewViewModel>();
             containerRegistry.RegisterForNavigation<StoreView, StoreViewViewModel>();
+
+            containerRegistry.Register<ILessonService, LessonServiceFake>();
         }
     }
 }
