@@ -28,8 +28,19 @@ namespace AppDuoXF.Fakes
                             Type = Enums.LessonGroupTypeEnum.Multi,
                             Lessons = new List<Lesson>
                             {
-                                GetNewLesson(string.Empty),
-                                GetNewLesson(string.Empty)
+                                GetNewLesson("Greetings"),
+                                GetNewLesson("Travel")
+                            }
+                        },
+
+                        new LessonGroup
+                        {
+                            Type = Enums.LessonGroupTypeEnum.Bonus,
+                            Lessons = new List<Lesson>
+                            {
+                                GetNewLesson("Bonus"),
+                                GetNewLesson("Bonus"),
+                                GetNewLesson("Bonus")
                             }
                         }
                     };

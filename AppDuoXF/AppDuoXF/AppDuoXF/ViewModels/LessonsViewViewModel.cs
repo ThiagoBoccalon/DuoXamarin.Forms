@@ -5,6 +5,7 @@ using Prism.Mvvm;
 using Prism.Navigation;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -15,13 +16,13 @@ namespace AppDuoXF.ViewModels
     {
         private readonly ILessonService _lessonService;
         public ICommand NavigateToTrainingCommand { get; private set; }
-        public IList<LessonGroup> LessonGroup { get; private set; }
+        public ObservableCollection<LessonGroup> LessonGroup { get; private set; }
 
         public LessonsViewViewModel(ILessonService lessonService)
         {
             _lessonService = lessonService;
             NavigateToTrainingCommand = new DelegateCommand(NavigateToTrainingExecute);
-            LessonGroup = new List<LessonGroup>();
+            LessonGroup = new ObservableCollection<LessonGroup>();
         }
         
         private void NavigateToTrainingExecute()

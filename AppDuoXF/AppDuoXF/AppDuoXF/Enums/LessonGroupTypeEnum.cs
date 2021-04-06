@@ -7,6 +7,7 @@ namespace AppDuoXF.Enums
     public enum LessonGroupTypeEnum
     {
         Single,
-        Multi
+        Multi,
+        Bonus
     }
 }
