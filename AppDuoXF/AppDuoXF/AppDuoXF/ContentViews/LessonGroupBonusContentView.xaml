@@ -4,7 +4,7 @@
              x:Class="AppDuoXF.ContentViews.LessonGroupBonusContentView">
   <ContentView.Content>
       <StackLayout>
-          <Label Text="Bonus View" />
+          <Label Text="Bonus View" FontSize="50" />
       </StackLayout>
   </ContentView.Content>
 </ContentView>
