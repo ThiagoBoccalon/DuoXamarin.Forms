@@ -19,7 +19,7 @@ namespace AppDuoXF.Fakes
                             Type = Enums.LessonGroupTypeEnum.Single,
                             Lessons = new List<Lesson>
                             {
-                                GetNewLesson("Introduction")
+                                GetNewLesson("Introduction", "4")
                             }
                         },
 
@@ -28,8 +28,8 @@ namespace AppDuoXF.Fakes
                             Type = Enums.LessonGroupTypeEnum.Multi,
                             Lessons = new List<Lesson>
                             {
-                                GetNewLesson("Greetings"),
-                                GetNewLesson("Travel")
+                                GetNewLesson("Greetings", "4"),
+                                GetNewLesson("Travel", string.Empty)
                             }
                         },
 
@@ -38,9 +38,9 @@ namespace AppDuoXF.Fakes
                             Type = Enums.LessonGroupTypeEnum.Bonus,
                             Lessons = new List<Lesson>
                             {
-                                GetNewLesson("Bonus"),
-                                GetNewLesson("Bonus"),
-                                GetNewLesson("Bonus")
+                                GetNewLesson("Bonus", string.Empty),
+                                GetNewLesson("Bonus", string.Empty),
+                                GetNewLesson("Bonus", string.Empty)
                             }
                         }
                     };
@@ -48,11 +48,12 @@ namespace AppDuoXF.Fakes
                 });
         }
 
-        private Lesson GetNewLesson(string name)
+        private Lesson GetNewLesson(string name, string level)
         {
             return new Lesson
             {
-                Name = name
+                Name = name,
+                Level = level
             };
         }
     }

@@ -24,11 +24,19 @@
                     HorizontalOptions="End"
                     VerticalOptions="End"
                     WidthRequest="45"
-                    />                
+                    />
+                <Label
+                    Text="{Binding Level}"
+                    TextColor="#ce8830"
+                    FontSize="20"
+                    HorizontalOptions="End"
+                    VerticalOptions="End"                    
+                    Margin="0,0,15,3"
+                    />
             </Grid>
             <Label
                     Text="{Binding Name}"
-                    FontSize="25"                    
+                    FontSize="20"                    
                     HorizontalTextAlignment="Center"
                     />
         </StackLayout>
