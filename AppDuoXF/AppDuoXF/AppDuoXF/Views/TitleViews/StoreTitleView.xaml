@@ -8,9 +8,9 @@
                 Margin="{OnPlatform Android='0,0,15,0', iOS='0'}"
                 >
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="105"/>
+                    <ColumnDefinition Width="110"/>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="105"/>
+                    <ColumnDefinition Width="110"/>
                 </Grid.ColumnDefinitions>
 
                 <Label
