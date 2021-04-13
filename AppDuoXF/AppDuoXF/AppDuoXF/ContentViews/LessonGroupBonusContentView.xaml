@@ -1,10 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:contentViews="clr-namespace:AppDuoXF.ContentViews"
              x:Class="AppDuoXF.ContentViews.LessonGroupBonusContentView">
-  <ContentView.Content>
-      <StackLayout>
-          <Label Text="Bonus View" FontSize="50" />
-      </StackLayout>
+    <ContentView.Content>
+        <FlexLayout
+                Direction="Row"
+                BackgroundColor="Yellow"
+                HeightRequest="180"
+                BindableLayout.ItemsSource="{Binding Lessons}"
+                AlignItems="Center"
+                JustifyContent="Center">
+
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <contentViews:LessonContentView />
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>                
+            </FlexLayout>      
   </ContentView.Content>
 </ContentView>
