@@ -5,8 +5,7 @@
              x:Class="AppDuoXF.ContentViews.LessonGroupSingleContentView">
   <ContentView.Content>
         <FlexLayout
-                Direction="Row"
-                BackgroundColor="Aqua"
+                Direction="Row"                
                 HeightRequest="180"
                 BindableLayout.ItemsSource="{Binding Lessons}"
                 AlignItems="Center"
