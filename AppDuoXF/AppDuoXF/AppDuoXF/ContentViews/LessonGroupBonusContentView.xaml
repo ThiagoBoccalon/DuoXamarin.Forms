@@ -12,8 +12,8 @@
                 JustifyContent="Center">
 
                 <BindableLayout.ItemTemplate>
-                    <DataTemplate>
-                        <contentViews:LessonContentView />
+                    <DataTemplate>                        
+                        <contentViews:BonusContentView />
                     </DataTemplate>
                 </BindableLayout.ItemTemplate>                
             </FlexLayout>      
