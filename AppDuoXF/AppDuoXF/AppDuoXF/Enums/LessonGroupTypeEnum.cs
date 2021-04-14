@@ -8,6 +8,7 @@ namespace AppDuoXF.Enums
     {
         Single,
         Multi,
-        Bonus
+        Bonus,
+        Divisor
     }
 }

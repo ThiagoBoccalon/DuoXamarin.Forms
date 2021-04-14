@@ -80,6 +80,24 @@ namespace AppDuoXF.Fakes
                             {
                                 GetNewLesson("Meet", "1", "lesson_bag", _colorLevel1)
                             }
+                        },
+
+                        new LessonGroup
+                        {
+                            Type = LessonGroupTypeEnum.Divisor,
+                            Lessons = new List<Lesson>
+                            {
+                                GetNewLesson(string.Empty, "2", "lesson_divisor_castle", string.Empty)
+                            }
+                        },
+
+                        new LessonGroup
+                        {
+                            Type = LessonGroupTypeEnum.Divisor,
+                            Lessons = new List<Lesson>
+                            {
+                                GetNewLesson(string.Empty, "2", "lesson_divisor_castle", string.Empty)
+                            }
                         }
                     };
 
