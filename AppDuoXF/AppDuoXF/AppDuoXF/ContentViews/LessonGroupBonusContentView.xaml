@@ -3,19 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:contentViews="clr-namespace:AppDuoXF.ContentViews"
              x:Class="AppDuoXF.ContentViews.LessonGroupBonusContentView">
-    <ContentView.Resources>
-        <ResourceDictionary>
-            <Style TargetType="BoxView">
-                <Setter Property="HeightRequest" Value="1"/>
-                <Setter Property="BackgroundColor" Value="#dfe0e0" />
-                <Setter Property="Margin" Value="0,15" />
-            </Style>
-        </ResourceDictionary>
-    </ContentView.Resources>
     
     <ContentView.Content>
         <StackLayout>
-            <BoxView />
+            <BoxView Style="{StaticResource DivisorLine}"/>
             <FlexLayout
                 Direction="Row"
                 HeightRequest="180"
