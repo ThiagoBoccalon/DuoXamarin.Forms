@@ -6,6 +6,7 @@
              >
   <ContentView.Content>
       <StackLayout
+          Spacing="8"
           >
             <Grid
                 WidthRequest="100"
@@ -19,20 +20,22 @@
                     WidthRequest="100"
                     HeightRequest="100"
                     />
-                <Image 
-                    Source="navbar_crown"
+                <Grid 
                     HorizontalOptions="End"
                     VerticalOptions="End"
-                    WidthRequest="45"
-                    />
-                <Label
-                    Text="{Binding Level}"
-                    TextColor="#ce8830"
-                    FontSize="20"
-                    HorizontalOptions="End"
-                    VerticalOptions="End"                    
-                    Margin="0,0,15,3"
-                    />
+                    WidthRequest="50"
+                    >
+                    <Image 
+                        Source="navbar_crown"                    
+                        />
+                    <Label
+                        Text="{Binding Level}"
+                        TextColor="#ce8830"
+                        FontSize="20"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"                        
+                        />
+                </Grid>
             </Grid>
             <Label
                     Text="{Binding Name}"
