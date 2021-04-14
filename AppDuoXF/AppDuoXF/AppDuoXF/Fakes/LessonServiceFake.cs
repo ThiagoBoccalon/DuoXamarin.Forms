@@ -19,7 +19,7 @@ namespace AppDuoXF.Fakes
                             Type = Enums.LessonGroupTypeEnum.Single,
                             Lessons = new List<Lesson>
                             {
-                                GetNewLesson("Introduction", "4")
+                                GetNewLesson("Introduction", "4", "lesson_egg")
                             }
                         },
 
@@ -28,8 +28,18 @@ namespace AppDuoXF.Fakes
                             Type = Enums.LessonGroupTypeEnum.Multi,
                             Lessons = new List<Lesson>
                             {
-                                GetNewLesson("Greetings", "4"),
-                                GetNewLesson("Travel", string.Empty)
+                                GetNewLesson("Greetings", "4", "lesson_dialog"),
+                                GetNewLesson("Travel", string.Empty, "lesson_airplane")
+                            }
+                        },
+
+                        new LessonGroup
+                        {
+                            Type = Enums.LessonGroupTypeEnum.Multi,
+                            Lessons = new List<Lesson>
+                            {
+                                GetNewLesson("Food", string.Empty, "lesson_hamburger"),
+                                GetNewLesson("Family", string.Empty, "lesson_baby"),
                             }
                         },
 
@@ -38,9 +48,9 @@ namespace AppDuoXF.Fakes
                             Type = Enums.LessonGroupTypeEnum.Bonus,
                             Lessons = new List<Lesson>
                             {
-                                GetNewLesson("Bonus", string.Empty),
-                                GetNewLesson("Bonus", string.Empty),
-                                GetNewLesson("Bonus", string.Empty)
+                                GetNewLesson("Bonus", string.Empty, "lesson_plus"),
+                                GetNewLesson("Bonus", string.Empty, "lesson_plus"),
+                                GetNewLesson("Bonus", string.Empty, "lesson_plus")
                             }
                         }
                     };
@@ -48,12 +58,13 @@ namespace AppDuoXF.Fakes
                 });
         }
 
-        private Lesson GetNewLesson(string name, string level)
+        private Lesson GetNewLesson(string name, string level, string icon)
         {
             return new Lesson
             {
                 Name = name,
-                Level = level
+                Level = level,
+                Icon = icon
             };
         }
     }

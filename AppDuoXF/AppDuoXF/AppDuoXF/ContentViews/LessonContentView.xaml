@@ -20,10 +20,16 @@
                     WidthRequest="100"
                     HeightRequest="100"
                     />
+                <Image 
+                    Source="{Binding Icon}"
+                    WidthRequest="60"
+                    HeightRequest="60"
+                    HorizontalOptions="Center"
+                    />
                 <Grid 
                     HorizontalOptions="End"
                     VerticalOptions="End"
-                    WidthRequest="50"
+                    WidthRequest="45"
                     >
                     <Image 
                         Source="crown_stroke"                    
