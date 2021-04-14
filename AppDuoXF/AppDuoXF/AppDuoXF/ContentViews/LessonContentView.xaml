@@ -7,19 +7,19 @@
              >
   <ContentView.Content>
       <StackLayout
-          Spacing="8"
+          Spacing="15"
           >
             <Grid
-                WidthRequest="100"
-                HeightRequest="100"
+                WidthRequest="90"
+                HeightRequest="90"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"                
                 >
                 <BoxView
                     BackgroundColor="{Binding Color}"
-                    CornerRadius="50"
-                    WidthRequest="100"
-                    HeightRequest="100"
+                    CornerRadius="45"
+                    WidthRequest="90"
+                    HeightRequest="90"
                     />
                 <Image 
                     Source="{Binding Icon}"
