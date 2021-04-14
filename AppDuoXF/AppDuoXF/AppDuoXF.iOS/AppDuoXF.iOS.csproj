@@ -273,5 +273,8 @@
   <ItemGroup>
     <BundleResource Include="Resources\navbar_heart.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\crown_stroke.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
