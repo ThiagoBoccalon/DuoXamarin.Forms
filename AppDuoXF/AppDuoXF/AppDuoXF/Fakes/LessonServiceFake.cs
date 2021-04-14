@@ -3,6 +3,7 @@ using AppDuoXF.Models;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using AppDuoXF.Enums;
 
 namespace AppDuoXF.Fakes
 {
@@ -12,7 +13,8 @@ namespace AppDuoXF.Fakes
         private string _colorLevel4 = "#f19a37";
         private string _colorLevel3 = "#ec5954";
         private string _colorLevel2 = "#8bc63b";
-        private string _colorLevel1 = "#4faef0";        
+        private string _colorLevel1 = "#4faef0";
+        private string _colorLevel0 = "#c287f8";
         private string _colorBonus  = "#ffffff";
         public async Task<List<LessonGroup>> GetLessonsGroup()
         {
@@ -22,7 +24,7 @@ namespace AppDuoXF.Fakes
                     {
                         new LessonGroup
                         {
-                            Type = Enums.LessonGroupTypeEnum.Single,
+                            Type = LessonGroupTypeEnum.Single,
                             Lessons = new List<Lesson>
                             {
                                 GetNewLesson("Introduction", "4", "lesson_egg", _colorLevel5)
@@ -31,7 +33,7 @@ namespace AppDuoXF.Fakes
 
                         new LessonGroup
                         {
-                            Type = Enums.LessonGroupTypeEnum.Multi,
+                            Type = LessonGroupTypeEnum.Multi,
                             Lessons = new List<Lesson>
                             {
                                 GetNewLesson("Greetings", "4", "lesson_dialog", _colorLevel4),
@@ -41,7 +43,7 @@ namespace AppDuoXF.Fakes
 
                         new LessonGroup
                         {
-                            Type = Enums.LessonGroupTypeEnum.Multi,
+                            Type = LessonGroupTypeEnum.Multi,
                             Lessons = new List<Lesson>
                             {
                                 GetNewLesson("Food", string.Empty, "lesson_hamburger", _colorLevel2),
@@ -51,12 +53,32 @@ namespace AppDuoXF.Fakes
 
                         new LessonGroup
                         {
-                            Type = Enums.LessonGroupTypeEnum.Bonus,
+                            Type = LessonGroupTypeEnum.Bonus,
                             Lessons = new List<Lesson>
                             {
                                 GetNewLesson("Bonus", string.Empty, "lesson_plus", _colorBonus),
                                 GetNewLesson("Bonus", string.Empty, "lesson_plus", _colorBonus),
                                 GetNewLesson("Bonus", string.Empty, "lesson_plus", _colorBonus)
+                            }
+                        },
+
+                        new LessonGroup
+                        {
+                            Type = LessonGroupTypeEnum.Multi,
+                            Lessons = new List<Lesson>
+                            {
+                                GetNewLesson("Store", string.Empty, "lesson_sock", _colorLevel0),
+                                GetNewLesson("Study", "1", "lesson_pencil", _colorLevel1),
+                                GetNewLesson("Profession", "2", "lesson_hat", _colorLevel2)
+                            }
+                        },
+
+                        new LessonGroup
+                        {
+                            Type = LessonGroupTypeEnum.Single,
+                            Lessons = new List<Lesson>
+                            {
+                                GetNewLesson("Meet", "1", "lesson_bag", _colorLevel1)
                             }
                         }
                     };
