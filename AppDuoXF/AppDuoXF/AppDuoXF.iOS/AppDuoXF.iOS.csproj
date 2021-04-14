@@ -276,5 +276,44 @@
   <ItemGroup>
     <BundleResource Include="Resources\crown_stroke.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lesson_airplane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lesson_baby.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lesson_bag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lesson_bike.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lesson_dialog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lesson_divisor_castle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lesson_egg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lesson_hamburger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lesson_hat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lesson_heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lesson_pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lesson_plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\lesson_sock.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
