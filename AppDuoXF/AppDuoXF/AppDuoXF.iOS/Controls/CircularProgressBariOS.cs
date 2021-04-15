@@ -5,6 +5,9 @@ using UIKit;
 
 namespace AppDuoXF.iOS.Controls
 {
+    /* This implementation is base of:
+       https://www.tutorialspoint.com/create-circular-progress-bar-in-ios
+     */
     public class CircularProgressBariOS : UIView
     {
         private CAShapeLayer _progressLayer  = new CAShapeLayer();
