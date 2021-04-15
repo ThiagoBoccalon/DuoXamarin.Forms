@@ -93,6 +93,16 @@ namespace AppDuoXF.Fakes
 
                         new LessonGroup
                         {
+                            Type = LessonGroupTypeEnum.Multi,
+                            Lessons = new List<Lesson>
+                            {
+                                GetNewLesson("Activities", "1", "lesson_bike", _colorLevel1),
+                                GetNewLesson("Heart", string.Empty, "lesson_heart", _colorLevel0)                
+                            }
+                        },
+
+                        new LessonGroup
+                        {
                             Type = LessonGroupTypeEnum.Divisor,
                             Lessons = new List<Lesson>
                             {
