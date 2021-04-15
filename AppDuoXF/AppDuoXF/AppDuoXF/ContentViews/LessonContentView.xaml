@@ -15,11 +15,16 @@
                 HeightRequest="110"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"                
-                >
+                >  
+                
                 <controls:CircularProgressBar
                     WidthRequest="110"
-                    HeightRequest="110"
+                    HeightRequest="110"                    
+                    TrackColor="#e6e6e6"
+                    ProgressColor="#f7ca45"
+                    Progress="{Binding Progress}"
                     />
+                
                 <BoxView
                     BackgroundColor="{Binding Color}"
                     CornerRadius="45"
@@ -28,20 +33,24 @@
                     HorizontalOptions="Center"
                     VerticalOptions="Center"
                     />
+                
                 <Image 
                     Source="{Binding Icon}"
                     WidthRequest="60"
                     HeightRequest="60"
                     HorizontalOptions="Center"
                     />
+                
                 <Grid 
                     HorizontalOptions="End"
                     VerticalOptions="End"
                     WidthRequest="45"
                     >
+                    
                     <Image 
                         Source="{Binding Level, Converter={converters:LevelToImageCrownConverter}}"                    
                         />
+                    
                     <Label
                         Text="{Binding Level}"
                         TextColor="#ce8830"
@@ -51,11 +60,12 @@
                         />
                 </Grid>
             </Grid>
+            
             <Label
-                    Text="{Binding Name}"
-                    FontSize="20"                    
-                    HorizontalTextAlignment="Center"
-                    />
+               Text="{Binding Name}"
+               FontSize="20"                    
+               HorizontalTextAlignment="Center"
+            />
         </StackLayout>
   </ContentView.Content>
 </ContentView>

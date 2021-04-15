@@ -27,7 +27,7 @@ namespace AppDuoXF.Fakes
                             Type = LessonGroupTypeEnum.Single,
                             Lessons = new List<Lesson>
                             {
-                                GetNewLesson("Introduction", "4", "lesson_egg", _colorLevel5)
+                                GetNewLesson("Introduction", "4", "lesson_egg", _colorLevel5, 1.0)
                             }
                         },
 
@@ -36,8 +36,8 @@ namespace AppDuoXF.Fakes
                             Type = LessonGroupTypeEnum.Multi,
                             Lessons = new List<Lesson>
                             {
-                                GetNewLesson("Greetings", "4", "lesson_dialog", _colorLevel4),
-                                GetNewLesson("Travel", string.Empty, "lesson_airplane", _colorLevel3)
+                                GetNewLesson("Greetings", "4", "lesson_dialog", _colorLevel4, 0.8),
+                                GetNewLesson("Travel", string.Empty, "lesson_airplane", _colorLevel3, 0.0)
                             }
                         },
 
@@ -46,8 +46,8 @@ namespace AppDuoXF.Fakes
                             Type = LessonGroupTypeEnum.Multi,
                             Lessons = new List<Lesson>
                             {
-                                GetNewLesson("Food", string.Empty, "lesson_hamburger", _colorLevel2),
-                                GetNewLesson("Family", string.Empty, "lesson_baby", _colorLevel1),
+                                GetNewLesson("Food", string.Empty, "lesson_hamburger", _colorLevel2, 0.7),
+                                GetNewLesson("Family", string.Empty, "lesson_baby", _colorLevel1, 0.1),
                             }
                         },
 
@@ -56,9 +56,9 @@ namespace AppDuoXF.Fakes
                             Type = LessonGroupTypeEnum.Bonus,
                             Lessons = new List<Lesson>
                             {
-                                GetNewLesson("Bonus", string.Empty, "lesson_plus", _colorBonus),
-                                GetNewLesson("Bonus", string.Empty, "lesson_plus", _colorBonus),
-                                GetNewLesson("Bonus", string.Empty, "lesson_plus", _colorBonus)
+                                GetNewLesson("Bonus", string.Empty, "lesson_plus", _colorBonus, 0.0),
+                                GetNewLesson("Bonus", string.Empty, "lesson_plus", _colorBonus, 0.0),
+                                GetNewLesson("Bonus", string.Empty, "lesson_plus", _colorBonus, 0.0)
                             }
                         },
 
@@ -67,9 +67,9 @@ namespace AppDuoXF.Fakes
                             Type = LessonGroupTypeEnum.Multi,
                             Lessons = new List<Lesson>
                             {
-                                GetNewLesson("Store", string.Empty, "lesson_sock", _colorLevel0),
-                                GetNewLesson("Study", "1", "lesson_pencil", _colorLevel1),
-                                GetNewLesson("Profession", "2", "lesson_hat", _colorLevel2)
+                                GetNewLesson("Store", string.Empty, "lesson_sock", _colorLevel0, 0.0),
+                                GetNewLesson("Study", "1", "lesson_pencil", _colorLevel1, 0.3),
+                                GetNewLesson("Profession", "2", "lesson_hat", _colorLevel2, 0.4)
                             }
                         },
 
@@ -78,7 +78,7 @@ namespace AppDuoXF.Fakes
                             Type = LessonGroupTypeEnum.Single,
                             Lessons = new List<Lesson>
                             {
-                                GetNewLesson("Meet", "1", "lesson_bag", _colorLevel1)
+                                GetNewLesson("Meet", "1", "lesson_bag", _colorLevel1, 0.9)
                             }
                         },
 
@@ -87,7 +87,7 @@ namespace AppDuoXF.Fakes
                             Type = LessonGroupTypeEnum.Divisor,
                             Lessons = new List<Lesson>
                             {
-                                GetNewLesson(string.Empty, "2", "lesson_divisor_castle", string.Empty)
+                                GetNewLesson(string.Empty, "2", "lesson_divisor_castle", string.Empty, 0.0)
                             }
                         },
 
@@ -96,8 +96,8 @@ namespace AppDuoXF.Fakes
                             Type = LessonGroupTypeEnum.Multi,
                             Lessons = new List<Lesson>
                             {
-                                GetNewLesson("Activities", "1", "lesson_bike", _colorLevel1),
-                                GetNewLesson("Heart", string.Empty, "lesson_heart", _colorLevel0)                
+                                GetNewLesson("Activities", "1", "lesson_bike", _colorLevel1, 0.6),
+                                GetNewLesson("Heart", string.Empty, "lesson_heart", _colorLevel0, 0.5)                
                             }
                         },
 
@@ -106,7 +106,7 @@ namespace AppDuoXF.Fakes
                             Type = LessonGroupTypeEnum.Divisor,
                             Lessons = new List<Lesson>
                             {
-                                GetNewLesson(string.Empty, "2", "lesson_divisor_castle", string.Empty)
+                                GetNewLesson(string.Empty, "2", "lesson_divisor_castle", string.Empty, 0.0)
                             }
                         }
                     };
@@ -114,14 +114,20 @@ namespace AppDuoXF.Fakes
                 });
         }
 
-        private Lesson GetNewLesson(string name, string level, string icon, string color)
+        private Lesson GetNewLesson(
+            string name, 
+            string level, 
+            string icon, 
+            string color,
+            double progress)
         {
             return new Lesson
             {
                 Name = name,
                 Level = level,
                 Icon = icon,
-                Color = color
+                Color = color,
+                Progress = progress
             };
         }
     }

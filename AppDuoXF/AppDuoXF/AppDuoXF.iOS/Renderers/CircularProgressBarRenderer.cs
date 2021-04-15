@@ -12,6 +12,7 @@ namespace AppDuoXF.iOS.Renderers
         protected override void OnElementChanged(ElementChangedEventArgs<CircularProgressBar> e)
         {
             base.OnElementChanged(e);
+            
             if(Control is null)
             {
                 if (Element is null)
@@ -19,7 +20,10 @@ namespace AppDuoXF.iOS.Renderers
 
                 var nativeControl = new CircularProgressBariOS(
                     Element.WidthRequest,
-                    Element.HeightRequest
+                    Element.HeightRequest,
+                    Element.TrackColor.ToCGColor(),
+                    Element.ProgressColor.ToCGColor(),
+                    Element.Progress
                     );
 
                 SetNativeControl(nativeControl);
