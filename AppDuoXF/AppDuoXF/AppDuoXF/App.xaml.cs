@@ -37,6 +37,7 @@ namespace AppDuoXF
             containerRegistry.RegisterForNavigation<StoreView, StoreViewViewModel>();
 
             containerRegistry.Register<ILessonService, LessonServiceFake>();
+            containerRegistry.RegisterForNavigation<StoriesView, StoriesViewViewModel>();
         }
     }
 }
