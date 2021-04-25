@@ -22,6 +22,22 @@ namespace AppDuoXF.Droid.Renderers
         protected override void OnElementChanged(ElementChangedEventArgs<CircularProgressBar> e)
         {
             base.OnElementChanged(e);
+
+            if (Control is null)
+            {
+                var nativeControl = new Android.Widget.ProgressBar(
+                    Context,
+                    null,
+                    Android.Resource.Attribute.ProgressBarStyleHorizontal
+                );
+
+                nativeControl.SetBackground(Context.GetDrawable(Resource.Drawable.circular_track_bar));
+                nativeControl.ProgressDrawable = Context.GetDrawable(Resource.Drawable.circular_progress_bar);
+                nativeControl.Max = 100;
+                nativeControl.Progress = 20;
+
+                SetNativeControl(nativeControl);
+            }
         }
     }
 }
