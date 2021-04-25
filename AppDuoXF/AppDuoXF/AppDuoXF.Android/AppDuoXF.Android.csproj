@@ -68,6 +68,7 @@
   <ItemGroup>
     <Compile Include="MainApplication.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Renderers\CircularProgressBarRenderer.cs" />
     <Compile Include="Renderers\CustomTabblePageRenderer.cs" />
     <Compile Include="Renderers\FormsFloatingAcctionButtonRenderer.cs" />
     <Compile Include="SplashActivity.cs" />
