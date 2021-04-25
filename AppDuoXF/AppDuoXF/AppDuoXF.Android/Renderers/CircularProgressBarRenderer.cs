@@ -1,9 +1,6 @@
-﻿using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
+﻿using Android.Content;
+using Android.Content.Res;
+using Android.Graphics.Drawables;
 using AppDuoXF.Controls;
 using AppDuoXF.Droid.Renderers;
 using Xamarin.Forms;
@@ -30,14 +27,32 @@ namespace AppDuoXF.Droid.Renderers
                     null,
                     Android.Resource.Attribute.ProgressBarStyleHorizontal
                 );
-
-                nativeControl.SetBackground(Context.GetDrawable(Resource.Drawable.circular_track_bar));
-                nativeControl.ProgressDrawable = Context.GetDrawable(Resource.Drawable.circular_progress_bar);
+                
+                nativeControl.SetBackground(GetCircularTrack(Element.TrackColor.ToAndroid()));
+                nativeControl.ProgressDrawable = GetCircularProgress(Element.ProgressColor.ToAndroid());
+                
                 nativeControl.Max = 100;
                 nativeControl.Progress = 20;
 
                 SetNativeControl(nativeControl);
             }
+        }
+
+        private Drawable GetCircularTrack(Android.Graphics.Color color)
+        {
+            var drawable = Context.GetDrawable(Resource.Drawable.circular_track_bar) as GradientDrawable;
+            drawable.SetColor(ColorStateList.ValueOf(color));
+            return drawable;
+        }
+
+        private Drawable GetCircularProgress(Android.Graphics.Color color)
+        {
+            var rotageDrawable = Context.GetDrawable(Resource.Drawable.circular_progress_bar) as RotateDrawable;
+
+            var drawable = rotageDrawable.Drawable as GradientDrawable;
+            drawable.SetColor(ColorStateList.ValueOf(color));
+
+            return rotageDrawable;
         }
     }
 }
