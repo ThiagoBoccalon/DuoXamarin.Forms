@@ -320,5 +320,17 @@
   <ItemGroup>
     <BundleResource Include="Resources\crown_gray_stroke.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\stories_bread.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\stories_candle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\stories_coffe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\stories_gift.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
