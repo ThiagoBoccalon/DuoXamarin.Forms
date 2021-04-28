@@ -31,11 +31,12 @@ namespace AppDuoXF
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<LessonsView, LessonsViewModel>();
+            containerRegistry.RegisterForNavigation<StoriesView, StoriesViewModel>();
             containerRegistry.RegisterForNavigation<TrainingView, TrainingViewModel>();
             containerRegistry.RegisterForNavigation<ProfileView, ProfileViewModel>();
             containerRegistry.RegisterForNavigation<RankingView, RankingViewModel>();
             containerRegistry.RegisterForNavigation<StoreView, StoreViewModel>();
-            containerRegistry.RegisterForNavigation<StoriesView, StoriesViewModel>();
+            
 
             containerRegistry.Register<ILessonService, LessonServiceFake>();
             containerRegistry.Register<IStoriesService, StoriesServiceFake>();
