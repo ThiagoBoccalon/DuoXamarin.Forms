@@ -6,9 +6,9 @@ using System.Linq;
 
 namespace AppDuoXF.ViewModels
 {
-    public class TrainingViewViewModel : BindableBase
+    public class TrainingViewModel : BindableBase
     {
-        public TrainingViewViewModel()
+        public TrainingViewModel()
         {
 
         }

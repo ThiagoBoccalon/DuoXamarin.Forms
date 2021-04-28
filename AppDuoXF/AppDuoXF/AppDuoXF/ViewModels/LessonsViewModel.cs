@@ -12,13 +12,13 @@ using System.Windows.Input;
 
 namespace AppDuoXF.ViewModels
 {
-    public class LessonsViewViewModel : BindableBase, IInitialize
+    public class LessonsViewModel : BindableBase, IInitialize
     {
         private readonly ILessonService _lessonService;
         public ICommand NavigateToTrainingCommand { get; private set; }
         public ObservableCollection<LessonGroup> LessonGroup { get; private set; }
 
-        public LessonsViewViewModel(ILessonService lessonService)
+        public LessonsViewModel(ILessonService lessonService)
         {
             _lessonService = lessonService;
             NavigateToTrainingCommand = new DelegateCommand(NavigateToTrainingExecute);

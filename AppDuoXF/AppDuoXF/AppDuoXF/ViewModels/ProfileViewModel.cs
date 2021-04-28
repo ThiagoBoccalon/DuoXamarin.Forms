@@ -6,9 +6,9 @@ using System.Linq;
 
 namespace AppDuoXF.ViewModels
 {
-    public class StoreViewViewModel : BindableBase
+    public class ProfileViewModel : BindableBase
     {
-        public StoreViewViewModel()
+        public ProfileViewModel()
         {
 
         }
