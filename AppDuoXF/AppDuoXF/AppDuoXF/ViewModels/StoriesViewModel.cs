@@ -1,4 +1,5 @@
-﻿using Prism.Commands;
+﻿using AppDuoXF.Interfaces;
+using Prism.Commands;
 using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
@@ -8,9 +9,10 @@ namespace AppDuoXF.ViewModels
 {
     public class StoriesViewModel : BindableBase
     {
-        public StoriesViewModel()
+        private readonly IStoriesService _storiesService;
+        public StoriesViewModel(IStoriesService storiesService)
         {
-
+            storiesService = _storiesService;
         }
     }
 }
