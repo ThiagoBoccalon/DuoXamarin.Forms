@@ -105,13 +105,15 @@
                             <Grid                                
                                 HeightRequest="190"
                                 WidthRequest="190"
+                                Padding="10,0"
                                 >
                                 <Frame
                                     HasShadow="False"
                                     BackgroundColor="Black"
-                                    WidthRequest="163"                                    
-                                    HeightRequest="163"
+                                    WidthRequest="152"                                    
+                                    HeightRequest="152"
                                     Padding="0"
+                                    TranslationX="-1.9"
                                     HorizontalOptions="Center"
                                     VerticalOptions="End"
                                     CornerRadius="25"
@@ -122,7 +124,7 @@
                                     VerticalOptions="CenterAndExpand"
                                     WidthRequest="180"
                                     HeightRequest="180"
-                                    TranslationY="-3"
+                                    TranslationY="8"
                                     BackgroundColor="Transparent"
                                  />
                             </Grid>
