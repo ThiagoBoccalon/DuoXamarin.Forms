@@ -63,7 +63,7 @@
 
                     <Label
                         Grid.Row="0"
-                        Text="Duolingo Stories"
+                        Text="Duolingo Stories X"
                         HorizontalTextAlignment="Center"
                         VerticalTextAlignment="End"
                         HeightRequest="100"
@@ -95,25 +95,24 @@
 
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout                        
+                    <StackLayout
+                        Padding="10,0"
                         >
                         <StackLayout
                             WidthRequest="240"
                             HeightRequest="200"                            
-                            Spacing="0"
                             >
                             <Grid                                
                                 HeightRequest="190"
-                                WidthRequest="190"
-                                Padding="10,0"
+                                WidthRequest="190"                                
                                 >
                                 <Frame
                                     HasShadow="False"
                                     BackgroundColor="Black"
-                                    WidthRequest="152"                                    
-                                    HeightRequest="152"
+                                    WidthRequest="153"                                    
+                                    HeightRequest="156"
                                     Padding="0"
-                                    TranslationX="-1.9"
+                                    TranslationX="-3"
                                     HorizontalOptions="Center"
                                     VerticalOptions="End"
                                     CornerRadius="25"
@@ -123,15 +122,25 @@
                                     Source="{Binding Image}"
                                     VerticalOptions="CenterAndExpand"
                                     WidthRequest="180"
-                                    HeightRequest="180"
-                                    TranslationY="8"
+                                    HeightRequest="180"                                    
                                     BackgroundColor="Transparent"
-                                 />
+                                    TranslationY="5"
+                                 >                                
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroup x:Name="CommonState">
+                                            <VisualState x:Name="Normal">
+                                                <VisualState.Setters>
+                                                    <Setter Property="TranslationY" Value="5"/>
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateManager.VisualStateGroups>
+                                </ImageButton>
                             </Grid>
                         </StackLayout>
                         <Label 
                             Text="{Binding Name}"
-                            FontSize="24"
+                            FontSize="22"
                             HorizontalTextAlignment="Center"
                             />
                     </StackLayout>
