@@ -125,17 +125,7 @@
                                     HeightRequest="180"                                    
                                     BackgroundColor="Transparent"
                                     TranslationY="5"
-                                 >                                
-                                    <VisualStateManager.VisualStateGroups>
-                                        <VisualStateGroup x:Name="CommonState">
-                                            <VisualState x:Name="Normal">
-                                                <VisualState.Setters>
-                                                    <Setter Property="TranslationY" Value="5"/>
-                                                </VisualState.Setters>
-                                            </VisualState>
-                                        </VisualStateGroup>
-                                    </VisualStateManager.VisualStateGroups>
-                                </ImageButton>
+                                 />
                             </Grid>
                         </StackLayout>
                         <Label 
