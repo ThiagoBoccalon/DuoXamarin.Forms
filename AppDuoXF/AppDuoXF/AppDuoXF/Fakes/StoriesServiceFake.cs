@@ -9,16 +9,22 @@ namespace AppDuoXF.Fakes
 {
     public class StoriesServiceFake : IStoriesService
     {
-        public async Task<IList<Stories>> GetStories()
+        public async Task<IList<StoriesGroup>> GetStories()
         {
             return await Task.Run(() =>
             {
-                return new List<Stories>()
+                return new List<StoriesGroup>()
                 {
-                    GetNewStories("Good Morning!", "stories_coffe"),
-                    GetNewStories("A Date", "stories_candle"),
-                    GetNewStories("One Thing", "stories_bread"),
-                    GetNewStories("Surprise", "stories_gift")
+                    new StoriesGroup(
+                        "Level 1",
+                        new List<Stories>()
+                        {
+                            GetNewStories("Good Morning!", "stories_coffe"),
+                            GetNewStories("A Date", "stories_candle"),
+                            GetNewStories("One Thing", "stories_bread"),
+                            GetNewStories("Surprise", "stories_gift")
+                        }
+                    )                    
                 };
             });
         }

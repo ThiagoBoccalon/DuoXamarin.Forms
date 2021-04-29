@@ -14,7 +14,7 @@ namespace AppDuoXF.ViewModels
     public class StoriesViewModel : BindableBase, IActiveAware
     {
         private readonly IStoriesService _storiesService;
-        public ObservableCollection<Stories> Stories { get; private set; }
+        public ObservableCollection<StoriesGroup> Stories { get; private set; }
 
         private bool _isActive;
         public bool IsActive
@@ -28,25 +28,25 @@ namespace AppDuoXF.ViewModels
         public StoriesViewModel(IStoriesService storiesService)
         {
             _storiesService = storiesService;
-            Stories = new ObservableCollection<Stories>();
+            Stories = new ObservableCollection<StoriesGroup>();
         }   
 
         private async void RaiseIsActivatedChanged()
         {
             if (IsActive)
             {                
-                var stories = await GetStories();
+                var groups = await GetStories();
 
                 if (Stories.Any())
                     Stories.Clear();
 
-                foreach (var story in stories)
+                foreach (var story in groups)
                     Stories.Add(story);
                 
             }
         }
 
-        private async Task<IList<Stories>> GetStories()
+        private async Task<IList<StoriesGroup>> GetStories()
         {
             return await _storiesService.GetStories();
         }
