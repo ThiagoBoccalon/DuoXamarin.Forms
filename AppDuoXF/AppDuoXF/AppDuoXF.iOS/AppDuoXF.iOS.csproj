@@ -104,6 +104,7 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Renderers\CircularProgressBarRenderer.cs" />
     <Compile Include="Renderers\CustomContentPageRenderer.cs" />
+    <Compile Include="Renderers\CustomImageButtonRenderer.cs" />
     <Compile Include="Renderers\CustomTabblePageRenderer.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
