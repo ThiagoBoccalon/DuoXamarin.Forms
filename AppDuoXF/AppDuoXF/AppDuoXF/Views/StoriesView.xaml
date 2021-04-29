@@ -58,10 +58,20 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>
-                        <Frame></Frame>
+                        <StackLayout
+                            WidthRequest="240"
+                            HeightRequest="240"
+                            >
+                            <Image
+                                Source="{Binding Image}"
+                                WidthRequest="180"
+                                HeightRequest="180"
+                                />
+                        </StackLayout>
                         <Label 
                             Text="{Binding Name}"
-                            FontSize="30"
+                            FontSize="24"
+                            HorizontalTextAlignment="Center"
                             />
                     </StackLayout>
                 </DataTemplate>
