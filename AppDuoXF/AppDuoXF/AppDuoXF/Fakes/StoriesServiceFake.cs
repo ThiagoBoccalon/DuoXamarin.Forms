@@ -15,10 +15,10 @@ namespace AppDuoXF.Fakes
             {
                 return new List<Stories>()
                 {
-                    GetNewStories("Bom dia!", "stories_coffe"),
-                    GetNewStories("Um encontro", "stories_candle"),
-                    GetNewStories("Uma coisa", "stories_bread"),
-                    GetNewStories("Surpresa", "stories_gift")
+                    GetNewStories("Good Morning!", "stories_coffe"),
+                    GetNewStories("A Date", "stories_candle"),
+                    GetNewStories("One Thing", "stories_bread"),
+                    GetNewStories("Surprise", "stories_gift")
                 };
             });
         }

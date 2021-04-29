@@ -36,7 +36,7 @@
 
                     <Label
                         Grid.Row="1"
-                        Text="Melhore sua leitura e escuta com histórias curtas!"
+                        Text="Earn XP with stories that challenge your written comprehension."
                         FontFamily="{StaticResource FontRegular}"
                         TextColor="{StaticResource SubTitleColor}"
                         HorizontalTextAlignment="Center"

@@ -34,8 +34,7 @@ namespace AppDuoXF.ViewModels
         private async void RaiseIsActivatedChanged()
         {
             if (IsActive)
-            {
-                System.Diagnostics.Debug.WriteLine("Evento da aba");                
+            {                
                 var stories = await GetStories();
 
                 if (Stories.Any())
