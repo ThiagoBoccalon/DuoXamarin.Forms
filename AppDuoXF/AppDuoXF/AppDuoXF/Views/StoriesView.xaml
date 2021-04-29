@@ -89,22 +89,43 @@
                 <GridItemsLayout
                     Orientation="Vertical"
                     Span="2"
-                    VerticalItemSpacing="30"
+                    VerticalItemSpacing="30"                    
                     />
             </CollectionView.ItemsLayout>
 
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout>
+                    <StackLayout                        
+                        >
                         <StackLayout
-                            WidthRequest="200"
-                            HeightRequest="200"
+                            WidthRequest="240"
+                            HeightRequest="200"                            
+                            Spacing="0"
                             >
-                            <Image
-                                Source="{Binding Image}"
-                                WidthRequest="180"
-                                HeightRequest="180"
-                                />
+                            <Grid                                
+                                HeightRequest="190"
+                                WidthRequest="190"
+                                >
+                                <Frame
+                                    HasShadow="False"
+                                    BackgroundColor="Black"
+                                    WidthRequest="163"                                    
+                                    HeightRequest="163"
+                                    Padding="0"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="End"
+                                    CornerRadius="25"
+                                    >                                    
+                                </Frame>
+                                <ImageButton
+                                    Source="{Binding Image}"
+                                    VerticalOptions="CenterAndExpand"
+                                    WidthRequest="180"
+                                    HeightRequest="180"
+                                    TranslationY="-3"
+                                    BackgroundColor="Transparent"
+                                 />
+                            </Grid>
                         </StackLayout>
                         <Label 
                             Text="{Binding Name}"
