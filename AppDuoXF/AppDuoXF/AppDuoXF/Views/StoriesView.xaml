@@ -89,6 +89,7 @@
                 <GridItemsLayout
                     Orientation="Vertical"
                     Span="2"
+                    VerticalItemSpacing="30"
                     />
             </CollectionView.ItemsLayout>
 
@@ -96,8 +97,8 @@
                 <DataTemplate>
                     <StackLayout>
                         <StackLayout
-                            WidthRequest="240"
-                            HeightRequest="240"
+                            WidthRequest="200"
+                            HeightRequest="200"
                             >
                             <Image
                                 Source="{Binding Image}"
