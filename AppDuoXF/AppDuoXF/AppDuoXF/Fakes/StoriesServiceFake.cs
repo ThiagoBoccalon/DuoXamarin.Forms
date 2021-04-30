@@ -19,22 +19,23 @@ namespace AppDuoXF.Fakes
                         "Level 1",
                         new List<Stories>()
                         {
-                            GetNewStories("Good Morning!", "stories_coffe"),
-                            GetNewStories("A Date", "stories_candle"),
-                            GetNewStories("One Thing", "stories_bread"),
-                            GetNewStories("Surprise", "stories_gift")
+                            GetNewStories("Good Morning!", "stories_coffe", "#f5b43f"),
+                            GetNewStories("A Date", "stories_candle", "#503322"),
+                            GetNewStories("One Thing", "stories_bread", "#68ad33"),
+                            GetNewStories("Surprise", "stories_gift", "#de90d0")
                         }
                     )                    
                 };
             });
         }
 
-        private Stories GetNewStories(string name, string image)
+        private Stories GetNewStories(string name, string image, string shadowBottomColor)
         {
             return new Stories
             {
                 Name = name,
-                Image = image
+                Image = image,
+                ShadowBottomColor = shadowBottomColor
             };
         }
     }
