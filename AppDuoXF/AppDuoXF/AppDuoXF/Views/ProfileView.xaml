@@ -42,10 +42,64 @@
                     HorizontalTextAlignment="Center"
                 />
             </StackLayout>
+            <FlexLayout
+                Grid.Row="1"
+                AlignContent="Stretch"
+            >
+                <Grid
+                    FlexLayout.Grow="1"
+                    RowSpacing="0"
+                >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="5" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        Text="CONQUISTAS"
+                        TextColor="#4fadef"
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                        VerticalOptions="Center"
+                    />
+
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="#4fadef"
+                        HeightRequest="10"
+                    />
+                </Grid>
+
+                <Grid
+                    FlexLayout.Grow="1"
+                    RowSpacing="0"
+                >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="5" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        Text="FRIENDS"
+                        TextColor="#afafae"
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                        VerticalOptions="Center"
+                    />
+
+                    <BoxView
+                        Grid.Row="1"
+                        BackgroundColor="#afafae"
+                        HeightRequest="10"
+                    />
+                </Grid>
+            </FlexLayout>
 
             <BoxView
                 Grid.Row="2"
-                BackgroundColor="Blue"
+                BackgroundColor="Violet"
             />
         </Grid>
     </ContentPage.Content>
