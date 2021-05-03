@@ -96,37 +96,34 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout
-                        Padding="10,0"                        
+                        Padding="10,0"
+                        WidthRequest="200"
+                        HeightRequest="200"  
+                        >                        
+                        <Grid                                
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"                                                         
                         >
-                        <StackLayout
-                            WidthRequest="240"
-                            HeightRequest="200"                            
-                            >
-                            <Grid                                
-                                HeightRequest="190"
-                                WidthRequest="190"                                
-                                >
-                                <Frame
-                                    HasShadow="False"
-                                    BackgroundColor="{Binding ShadowBottomColor}"
-                                    WidthRequest="153"                                    
-                                    HeightRequest="156"
-                                    Padding="0"
-                                    TranslationX="-3"
-                                    HorizontalOptions="Center"
-                                    VerticalOptions="End"
-                                    CornerRadius="25"
-                                    />
-                                <ImageButton
-                                    Source="{Binding Image}"
-                                    VerticalOptions="CenterAndExpand"
-                                    WidthRequest="180"
-                                    HeightRequest="180"                                    
-                                    BackgroundColor="Transparent"
-                                    TranslationY="5"
-                                 />
-                            </Grid>
-                        </StackLayout>
+                            <BoxView                                
+                                BackgroundColor="{Binding ShadowBottomColor}"
+                                WidthRequest="118"
+                                HeightRequest="118"
+                                TranslationX="-3"
+                                HorizontalOptions="Center"
+                                VerticalOptions="End"
+                                CornerRadius="18"
+                                TranslationY="-5"
+                            />
+                            <ImageButton
+                                Source="{Binding Image}"                                
+                                WidthRequest="140"
+                                HeightRequest="140"
+                                HorizontalOptions="Center"
+                                VerticalOptions="End"
+                                BackgroundColor="Transparent"                                
+                            />
+                        </Grid>
+
                         <Label 
                             Text="{Binding Name}"
                             FontSize="22"
