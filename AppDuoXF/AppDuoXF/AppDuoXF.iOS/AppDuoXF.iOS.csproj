@@ -333,5 +333,8 @@
   <ItemGroup>
     <BundleResource Include="Resources\stories_gift.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\profile_user.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
