@@ -1,4 +1,5 @@
-﻿using AppDuoXF.Interfaces;
+﻿using AppDuoXF.ContentViews;
+using AppDuoXF.Interfaces;
 using AppDuoXF.Views.TitleViews;
 using System;
 using Xamarin.Forms;
@@ -8,6 +9,9 @@ namespace AppDuoXF.Views
     public partial class ProfileView : ContentPage, IDynamicTitle, ITabPageIcons
     {
         private View _title;
+        private Lazy<ProfileAchievementsContentView> _sectionAchievements = new Lazy<ProfileAchievementsContentView>();
+        private Lazy<ProfileFriendsContentView> _sectionFriends = new Lazy<ProfileFriendsContentView>();
+
         public ProfileView()
         {
             InitializeComponent();
@@ -25,6 +29,7 @@ namespace AppDuoXF.Views
                     if(index++ == 0)
                     {
                         GoToStateSelected(grid);
+                        sectionContentView.Content = _sectionAchievements.Value;
                         continue;
                     }
 
@@ -44,16 +49,15 @@ namespace AppDuoXF.Views
 
                 if(grid.AutomationId == "gridAchievements")
                 {
-                    System.Diagnostics.Debug.WriteLine("tapped achievements");
+                    sectionContentView.Content = _sectionAchievements.Value;
                     return;
                 }
 
                 if (grid.AutomationId == "gridFriends")
                 {
-                    System.Diagnostics.Debug.WriteLine("tapped friends");
+                    sectionContentView.Content = _sectionFriends.Value;
                     return;
                 }
-
             }
         }
 
