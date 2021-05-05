@@ -158,8 +158,7 @@
 
             <ContentView
                 x:Name="sectionContentView"
-                Grid.Row="2"
-                BackgroundColor="Violet"
+                Grid.Row="2"                
             />
         </Grid>
     </ContentPage.Content>
