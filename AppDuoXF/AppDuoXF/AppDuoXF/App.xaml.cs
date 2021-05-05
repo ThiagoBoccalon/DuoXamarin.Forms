@@ -40,6 +40,7 @@ namespace AppDuoXF
 
             containerRegistry.Register<ILessonService, LessonServiceFake>();
             containerRegistry.Register<IStoriesService, StoriesServiceFake>();
+            containerRegistry.Register<IAchievementsService, AchievementsServiceFake>();
         }
     }
 }
