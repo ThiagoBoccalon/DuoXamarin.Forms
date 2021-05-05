@@ -9,7 +9,7 @@ namespace AppDuoXF.Fakes
 {
     public class AchievementsServiceFake : IAchievementsService
     {
-        public async Task<IList<Achievement>> GetAchievements()
+        public async Task<IList<Achievement>> GetAchievementsAsync()
         {
             return await Task.Run(() =>
             {

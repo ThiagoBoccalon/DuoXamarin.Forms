@@ -8,6 +8,6 @@ namespace AppDuoXF.Interfaces
 {
     public interface IAchievementsService
     {
-        Task<IList<Achievement>> GetAchievements();
+        Task<IList<Achievement>> GetAchievementsAsync();
     }
 }
