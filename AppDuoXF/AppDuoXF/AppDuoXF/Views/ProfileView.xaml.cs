@@ -11,6 +11,7 @@ namespace AppDuoXF.Views
         private View _title;
         private Lazy<ProfileAchievementsContentView> _sectionAchievements = new Lazy<ProfileAchievementsContentView>();
         private Lazy<ProfileFriendsContentView> _sectionFriends = new Lazy<ProfileFriendsContentView>();
+        private bool _isFirstAppear = true;
 
         public ProfileView()
         {
@@ -21,12 +22,20 @@ namespace AppDuoXF.Views
         {
             base.OnAppearing();
 
+            if (_isFirstAppear)
+                SelectFirstSection();
+
+            _isFirstAppear = false;
+        }
+
+        private void SelectFirstSection()
+        {
             var index = 0;
-            foreach(var view in flexLayoutSection.Children)
+            foreach (var view in flexLayoutSection.Children)
             {
-                if(view is Grid grid)
+                if (view is Grid grid)
                 {
-                    if(index++ == 0)
+                    if (index++ == 0)
                     {
                         GoToStateSelected(grid);
                         sectionAchievements.IsVisible = true;
