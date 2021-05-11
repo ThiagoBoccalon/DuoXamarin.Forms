@@ -20,7 +20,7 @@ namespace AppDuoXF.Fakes
                     "LEVEL 9",
                     "",
                     "Earn 80 crowns",
-                    98.75,
+                    0.9875,
                     "79/80"),
 
                     GetAchievement(
@@ -28,7 +28,7 @@ namespace AppDuoXF.Fakes
                     "LEVEL 8",
                     "Intellectual",
                     "Learn 1,000 new words in one course",
-                    86.3,
+                    0.863,
                     "863/1k"),
 
                     GetAchievement(
@@ -36,7 +36,7 @@ namespace AppDuoXF.Fakes
                     "LEVEL 5",
                     "Bull's eye",
                     "Complete 100 lessons without makink a mistake",
-                    81,
+                    0.81,
                     "81/100"),
 
                     GetAchievement(
@@ -44,7 +44,7 @@ namespace AppDuoXF.Fakes
                     "LEVEL 7",
                     "Knows all",
                     "Earn 7500 XP",
-                    72,
+                    0.72,
                     "5,4K/7,5K"),
 
                     GetAchievement(
@@ -52,7 +52,7 @@ namespace AppDuoXF.Fakes
                     "LEVEL 3",
                     "Bonfire",
                     "Reach a 14-day offensive",
-                    50,
+                    0.5,
                     "7/14"),
 
                     GetAchievement(
@@ -60,7 +60,7 @@ namespace AppDuoXF.Fakes
                     "LEVEL 1",
                     "Strategist",
                     "You read a tip",
-                    100,
+                    1,
                     string.Empty),
                 };
             });
