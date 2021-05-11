@@ -157,8 +157,15 @@
             </FlexLayout>
 
             <ContentView
-                x:Name="sectionContentView"
+                x:Name="sectionAchievements"
+                IsVisible="false"
                 Grid.Row="2"                
+            />
+
+            <ContentView
+                IsVisible="false"
+                x:Name="sectionFriends"
+                Grid.Row="2"
             />
         </Grid>
     </ContentPage.Content>
