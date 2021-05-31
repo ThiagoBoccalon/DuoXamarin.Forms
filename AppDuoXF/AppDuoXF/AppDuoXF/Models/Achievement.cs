@@ -12,5 +12,6 @@ namespace AppDuoXF.Models
         public string Description { get; set; }
         public double Progress { get; set; }
         public string Status { get; set; }
+        public bool IsActive { get; set; }
     }
 }

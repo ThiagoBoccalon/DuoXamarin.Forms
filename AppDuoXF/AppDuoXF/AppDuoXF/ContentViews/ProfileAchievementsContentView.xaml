@@ -15,8 +15,8 @@
                         >
                         <ViewCell.View>
                             <FlexLayout Padding="20">
-                                <Grid HeightRequest="130" WidthRequest="200">
-                                    <Image Source="{Binding Icon}" WidthRequest="200" />
+                                <Grid FlexLayout.Basis="200" HeightRequest="130">
+                                    <Image Source="{Binding Icon}"/>
                                     <Label
                                         FontSize="20"
                                         HorizontalTextAlignment="Center"
@@ -25,8 +25,11 @@
                                         TranslationY="-20"
                                         VerticalTextAlignment="End" />
                                 </Grid>
-                                <StackLayout Margin="20,0,0,0" Spacing="0">
-                                    <Label 
+                                <StackLayout
+                                    Margin="20,0,0,0" 
+                                    FlexLayout.Basis="100%"
+                                    Spacing="0">
+                                    <Label                                        
                                         FontSize="26" 
                                         Text="{Binding Name}" 
                                         VerticalOptions="FillAndExpand"/>
@@ -36,7 +39,10 @@
                                         Text="{Binding Description}"
                                         TextColor="#777777" 
                                         VerticalOptions="FillAndExpand"/>
-                                    <Grid ColumnSpacing="20" VerticalOptions="FillAndExpand">
+                                    <Grid 
+                                        ColumnSpacing="20"
+                                        IsVisible="{Binding IsActive}"
+                                        VerticalOptions="FillAndExpand">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*" />
                                             <ColumnDefinition Width="Auto" />
