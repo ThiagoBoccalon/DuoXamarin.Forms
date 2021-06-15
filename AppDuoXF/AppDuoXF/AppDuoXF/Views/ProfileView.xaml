@@ -57,6 +57,7 @@
     
     <ContentPage.Content>
         <Grid
+            Margin="{OnPlatform Android=0, iOS=0,0,0,66}"
             RowSpacing="0"
             >
             <Grid.RowDefinitions>
