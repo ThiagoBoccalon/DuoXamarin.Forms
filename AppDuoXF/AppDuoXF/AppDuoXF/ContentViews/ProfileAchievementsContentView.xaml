@@ -2,6 +2,7 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:AppDuoXF.Controls"
+             xmlns:converters="clr-namespace:AppDuoXF.Converters"
              x:Class="AppDuoXF.ContentViews.ProfileAchievementsContentView">
   <ContentView.Content>
         <ListView
@@ -21,7 +22,7 @@
                                         FontSize="20"
                                         HorizontalTextAlignment="Center"
                                         Text="{Binding Level}"
-                                        TextColor="White"
+                                        TextColor="{Binding IsActive, Converter={converters:AchievementsActiveToTextColorConverter}}"
                                         TranslationY="-20"
                                         VerticalTextAlignment="End" />
                                 </Grid>
