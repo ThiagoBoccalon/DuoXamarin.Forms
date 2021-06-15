@@ -356,5 +356,8 @@
   <ItemGroup>
     <BundleResource Include="Resources\profile_achievements_06.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\profile_friends_gift.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
