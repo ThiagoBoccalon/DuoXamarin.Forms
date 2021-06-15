@@ -5,7 +5,8 @@
              xmlns:converters="clr-namespace:AppDuoXF.Converters"
              x:Class="AppDuoXF.ContentViews.ProfileAchievementsContentView">
   <ContentView.Content>
-        <ListView
+        <ListView          
+          CachingStrategy="RecycleElement"
           ItemsSource="{Binding Achievements}"
           HasUnevenRows="True"
           SeparatorVisibility="None"
@@ -26,10 +27,12 @@
                                         TranslationY="-20"
                                         VerticalTextAlignment="End" />
                                 </Grid>
-                                <StackLayout
-                                    Margin="20,0,0,0" 
+                                <FlexLayout
+                                    Margin="20,0,0,0"           
+                                    Direction="Column"
                                     FlexLayout.Basis="100%"
-                                    Spacing="0">
+                                    JustifyContent="SpaceEvenly"
+                                    >
                                     <Label                                        
                                         FontSize="26" 
                                         Text="{Binding Name}" 
@@ -63,7 +66,7 @@
                                             VerticalOptions="Center"
                                             />
                                     </Grid>
-                                </StackLayout>
+                                </FlexLayout>
                             </FlexLayout>
                         </ViewCell.View>
                     </ViewCell>

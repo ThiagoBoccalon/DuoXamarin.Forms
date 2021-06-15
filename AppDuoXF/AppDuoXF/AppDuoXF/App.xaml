@@ -18,7 +18,7 @@
                 Android="Fonts/DINNextRoundedLTPro-Regular.ttf#DINNextRounded" 
                 iOS="DINNextRoundedLTPro-Regular" 
             />
-
+                        
             <Color x:Key="TitleColor">#4b4c4b</Color>
             <Color x:Key="SubTitleColor">#828282</Color>
             <Color x:Key="TrackColor">#e6e6e6</Color>
