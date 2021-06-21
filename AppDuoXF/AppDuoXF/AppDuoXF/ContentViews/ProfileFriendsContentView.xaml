@@ -4,7 +4,47 @@
              x:Class="AppDuoXF.ContentViews.ProfileFriendsContentView">
   <ContentView.Content>
       <StackLayout>
-          <Label Text="Friends View" FontSize="40"/>
+            <CollectionView ItemsSource="{Binding Friends}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="25,10" ColumnSpacing="15">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <Frame
+                                Grid.Column="0"
+                                Margin="10"
+                                Padding="0"
+                                CornerRadius="30"
+                                HasShadow="False"
+                                IsClippedToBounds="True">
+                                <Image
+                                    HeightRequest="60"
+                                    Source="{Binding Photo}"
+                                    WidthRequest="60" />
+                            </Frame>
+
+                            <Label
+                                Grid.Column="1"
+                                FontSize="24"
+                                LineBreakMode="TailTruncation"
+                                Text="{Binding Name}"
+                                VerticalTextAlignment="Center" />
+
+                            <Label
+                                Grid.Column="2"
+                                FontFamily="{StaticResource FontRegular}"
+                                FontSize="24"
+                                Text="{Binding Experience}"
+                                TextColor="{StaticResource SubTitleColor}"
+                                VerticalTextAlignment="Center" />                            
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
       </StackLayout>
   </ContentView.Content>
 </ContentView>
