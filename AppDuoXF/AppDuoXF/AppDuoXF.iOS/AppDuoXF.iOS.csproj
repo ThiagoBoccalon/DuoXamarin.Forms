@@ -380,5 +380,41 @@
   <ItemGroup>
     <BundleResource Include="Resources\ranking_level_1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\store_checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\store_diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\store_duo_plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\store_item_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\store_item_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\store_item_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\store_item_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\store_item_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\store_item_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\store_item_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\store_item_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\store_item_9.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
