@@ -5,8 +5,60 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="AppDuoXF.Views.RankingView"
              >
-    <StackLayout>
-        <Label Text="Ranking View" />
-    </StackLayout>
-    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="RankingLevel" TargetType="Image">
+                <Setter Property="HeightRequest" Value="{OnPlatform Android=50, iOS=70}" />
+                <Setter Property="Margin" Value="10" />
+            </Style>
+
+            <Style x:Key="RankingLevelHighlight" TargetType="Image">
+                <Setter Property="HeightRequest" Value="{OnPlatform Android=100, iOS=120}" />
+                <Setter Property="Margin" Value="10" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <Grid Margin="{OnPlatform Android=0, iOS='0,50,0,0'}"
+              RowSpacing="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="2" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0">
+                <ScrollView Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="ranking_level_1" Style="{StaticResource RankingLevelHighlight}" />
+                        <Image Source="ranking_level" Style="{StaticResource RankingLevel}" />
+                        <Image Source="ranking_level" Style="{StaticResource RankingLevel}" />
+                        <Image Source="ranking_level" Style="{StaticResource RankingLevel}" />
+                        <Image Source="ranking_level" Style="{StaticResource RankingLevel}" />
+                        <Image Source="ranking_level" Style="{StaticResource RankingLevel}" />
+                        <Image Source="ranking_level" Style="{StaticResource RankingLevel}" />
+                        <Image Source="ranking_level" Style="{StaticResource RankingLevel}" />
+                        <Image Source="ranking_level" Style="{StaticResource RankingLevel}" />
+                        <Image Source="ranking_level" Style="{StaticResource RankingLevel}" />
+                    </StackLayout>
+                </ScrollView>
+
+                <Label
+                    FontSize="30"
+                    HorizontalTextAlignment="Center"
+                    Text="Bronze Division"
+                    TextColor="{StaticResource TitleColor}" />
+                <Label
+                    FontFamily="{StaticResource FontRegular}"
+                    FontSize="24"
+                    HorizontalTextAlignment="Center"
+                    Text="Ranking for week"
+                    TextColor="{StaticResource SubTitleColor}" />
+            </StackLayout>
+
+            <BoxView Grid.Row="1" BackgroundColor="Gray" />
+            <BoxView Grid.Row="2" BackgroundColor="Green" />
+        </Grid>
+    </ContentPage.Content>    
 </ContentPage>
