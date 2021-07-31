@@ -5,8 +5,55 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="AppDuoXF.Views.StoreView"
              >
-    <StackLayout>
-        <Label Text="Store View" />
-    </StackLayout>
-  
+    <ContentPage.Content>
+        <CollectionView Margin="20" 
+                        ItemsSource="{Binding Groups}">
+            <CollectionView.Header>
+                <Grid ColumnSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="140"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Frame
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Padding="0"
+                        CornerRadius="20"
+                        IsClippedToBounds="True">
+                        <Image Aspect="Fill" Source="store_duo_plus" />
+                    </Frame>
+
+                    <Label
+                        Margin="20,0"
+                        FontFamily="{StaticResource FontRegular}"
+                        FontSize="Large"
+                        Text="Download any offline lesson and say goodbye to ads."
+                        TextColor="White"
+                        VerticalTextAlignment="Center"
+                        WidthRequest="50"/>
+
+                    <Grid
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Margin="20"
+                        VerticalOptions="End">
+                        <BoxView
+                            BackgroundColor="#91D8F7"
+                            CornerRadius="20"
+                            HeightRequest="60"/>
+
+                        <Button
+                            BackgroundColor="White"
+                            CornerRadius="20"
+                            HeightRequest="60"
+                            Style="{StaticResource ElevatedButton}"
+                            Text="TRY IT FREE"
+                            />
+                    </Grid>
+                </Grid>
+            </CollectionView.Header>
+        </CollectionView>
+    </ContentPage.Content>  
+        
 </ContentPage>
