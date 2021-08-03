@@ -1,12 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:prism="http://prismlibrary.com"
+             xmlns:templates="clr-namespace:AppDuoXF.Templates"
+    xmlns:prism="http://prismlibrary.com"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="AppDuoXF.Views.StoreView"
              >
     <ContentPage.Content>
-        <CollectionView Margin="20" 
+        <CollectionView Margin="{OnPlatform Android=20, iOS='20,20,20,70'}"
+                        IsGrouped="True"
+                        ItemSizingStrategy="MeasureAllItems"
+                        ItemTemplate="{templates:StoreItemDataTemplate}"
+                        VerticalScrollBarVisibility="Never"
                         ItemsSource="{Binding Groups}">
             <CollectionView.Header>
                 <Grid ColumnSpacing="0">
@@ -53,6 +58,22 @@
                     </Grid>
                 </Grid>
             </CollectionView.Header>
+
+            <CollectionView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <Label
+                        Margin="0,20"
+                        FontSize="Title"
+                        Text="{Binding Name}"
+                        VerticalTextAlignment="Center" />
+                </DataTemplate>
+            </CollectionView.GroupHeaderTemplate>
+
+            <CollectionView.GroupFooterTemplate>
+                <DataTemplate>
+                    <ContentView />
+                </DataTemplate>
+            </CollectionView.GroupFooterTemplate>
         </CollectionView>
     </ContentPage.Content>  
         

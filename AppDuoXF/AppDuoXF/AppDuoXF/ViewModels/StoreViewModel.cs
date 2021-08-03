@@ -5,6 +5,7 @@ using Prism.Commands;
 using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace AppDuoXF.ViewModels
@@ -21,12 +22,12 @@ namespace AppDuoXF.ViewModels
         }
 
         public event EventHandler IsActiveChanged;
-        public List<StoreItemGroup> Groups { get; private set; }
+        public ObservableCollection<StoreItemGroup> Groups { get; private set; }
 
         public StoreViewModel(IStoreService storeService)
         {
             _storeService = storeService;
-            Groups = new List<StoreItemGroup>();
+            Groups = new ObservableCollection<StoreItemGroup>();
         }
 
         private async void RaisePropertyChanged()
@@ -36,7 +37,8 @@ namespace AppDuoXF.ViewModels
                 if (!Groups.Any())
                 {
                     var storeGroups = await _storeService.GetItems();
-                    Groups.AddRange(storeGroups);
+                    foreach (var group in storeGroups)
+                        Groups.Add(group);
                 }
             }
         }

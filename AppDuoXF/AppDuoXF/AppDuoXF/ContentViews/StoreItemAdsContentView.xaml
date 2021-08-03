@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppDuoXF.ContentViews.StoreItemAdsContentView">
+  <ContentView.Content>
+        <Frame
+          Margin="2,0"
+          BorderColor="#E5E5E5"
+          CornerRadius="20"
+          HasShadow="False">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image
+                Grid.Column="0"
+                Source="{Binding Icon}"
+                VerticalOptions="Start"
+                WidthRequest="100" />
+
+                <StackLayout Grid.Column="1" Spacing="10">
+                    <Label FontSize="Large" Text="{Binding Name}" />
+
+                    <Label
+                        FontFamily="{StaticResource FontRegular}"
+                        FontSize="Large"
+                        Text="{Binding Description}"
+                        TextColor="{StaticResource SubTitleColor}"/>
+
+                    <Button
+                        BackgroundColor="Transparent"
+                        FontFamily="{StaticResource FontBold}"
+                        FontSize="22"
+                        HorizontalOptions="Start"
+                        Text="FREE TEST"
+                        TextColor="#1bb0f7" />
+                </StackLayout>
+            </Grid>
+
+            
+        </Frame>
+  </ContentView.Content>
+</ContentView>
