@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:templates="clr-namespace:AppDuoXF.Templates"
-    xmlns:prism="http://prismlibrary.com"
+             xmlns:prism="http://prismlibrary.com"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="AppDuoXF.Views.StoreView"
              >
@@ -17,7 +17,7 @@
                 <Grid ColumnSpacing="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="140"/>
+                        <ColumnDefinition Width="110"/>
                     </Grid.ColumnDefinitions>
 
                     <Frame
@@ -42,6 +42,7 @@
                         Grid.Column="0"
                         Grid.ColumnSpan="2"
                         Margin="20"
+                        HorizontalOptions="{OnPlatform Android=Start, iOS=Fill}"
                         VerticalOptions="End">
                         <BoxView
                             BackgroundColor="#91D8F7"
