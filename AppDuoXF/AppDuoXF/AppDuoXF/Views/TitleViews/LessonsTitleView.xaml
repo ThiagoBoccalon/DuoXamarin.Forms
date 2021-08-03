@@ -38,10 +38,8 @@
                        />
             </StackLayout>
 
-            <StackLayout
-                Orientation="Horizontal"
-                >
-                <Image Source="navbar_diamont.png"
+            <StackLayout Orientation="Horizontal">
+                <Image Source="navbar_heart.png"
                        HeightRequest="40"
                        />
                 <Label Text="74"

@@ -27,7 +27,7 @@
                     Orientation="Horizontal"
                     >
                     <Image 
-                        Source="navbar_diamont.png"
+                        Source="navbar_diamond.png"
                         HeightRequest="40"
                         />
                     <Label
@@ -35,7 +35,7 @@
                         VerticalTextAlignment="Center"
                         HorizontalTextAlignment="Center"
                         FontSize="Large"
-                        TextColor="#de5c56"
+                        TextColor="#1bb0f7"
                         />
                 </StackLayout>
             </Grid>
